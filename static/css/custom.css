@@ -1,0 +1,16 @@
+.encrypt_part {
+    margin-top: 60px;
+}
+.buttons_part {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.no_resize {
+    resize: none;
+}
+.chart_panel{
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
