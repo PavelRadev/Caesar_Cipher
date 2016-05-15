@@ -18,14 +18,15 @@ class Crypth(models.Model):
         self.step = step
         self.method = method
         self.final_text = ''
+
+        def work_with_step(symbol, onstep):
+            if method == "encrypt":
+                return symbol + onstep
+            elif method == "decrypt":
+                return symbol - onstep
+
         for (i, letter) in enumerate(source_text):
             ascii_letter_source = ord(letter)
-
-            def work_with_step(symbol, onstep):
-                if method == "encrypt":
-                    return symbol + onstep
-                elif method == "decrypt":
-                    return symbol - onstep
 
             if 64 < ascii_letter_source < 91:
                 ascii_letter_final = work_with_step(ascii_letter_source, step)
