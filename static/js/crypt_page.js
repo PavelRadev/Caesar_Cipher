@@ -34,7 +34,7 @@ var server_send_get_response = function (text, step, method) {
 
         // handle a non-successful response
         error : function(xhr,errmsg,err) {
-            document.write(xhr.status + ": " + xhr.responseText);
+            alert('При обращении к серверу произошла ошибка');
         }
     });
 };
@@ -114,7 +114,6 @@ $("#start_text_textarea").keyup(function () {
     }
     if (upCaseString.length <= 100) {
     } else {
-        kek = [1, 2, 4];
         var maxLetterCount = 0, maxLetterIndex = -1;
         for (var j = 0; j < letters.length; j++) {
             if (letters[j] > maxLetterCount) {
